@@ -23,7 +23,6 @@
         <module>validation</module>
         <module>data-binding</module>
         <module>conversion</module>
-        <module>generic</module>
         <module>event</module>
         <module>annotation</module>
         <module>environment</module>
@@ -68,10 +67,6 @@
     <!-- Spring 依赖 -->
     <dependencies>
         <!-- Spring IoC 核心依赖 -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
@@ -86,6 +81,13 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webflux</artifactId>
+        </dependency>
+        <!-- 注解 -->
+        <!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>javax.annotation-api</artifactId>
+            <version>1.3.2</version>
         </dependency>
     </dependencies>
 
