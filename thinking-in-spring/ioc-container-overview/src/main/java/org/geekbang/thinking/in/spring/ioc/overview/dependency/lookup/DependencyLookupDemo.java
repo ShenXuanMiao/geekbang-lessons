@@ -15,7 +15,6 @@ import java.util.Map;
  * 1. 通过名称的方式来查找
  *
  * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
- * 
  */
 public class DependencyLookupDemo {
 
@@ -37,7 +36,7 @@ public class DependencyLookupDemo {
     private static void lookupByAnnotationType(BeanFactory beanFactory) {
         if (beanFactory instanceof ListableBeanFactory) {
             ListableBeanFactory listableBeanFactory = (ListableBeanFactory) beanFactory;
-            Map<String,Object> users =listableBeanFactory.getBeansWithAnnotation(Super.class);
+            Map<String, Object> users = listableBeanFactory.getBeansWithAnnotation(Super.class);
             System.out.println("查找标注 @Super 所有的 User 集合对象：" + users);
         }
     }
@@ -55,11 +54,13 @@ public class DependencyLookupDemo {
         System.out.println("实时查找：" + user);
     }
 
-    @SuppressWarnings("unchecked")
+
     private static void lookupInLazy(BeanFactory beanFactory) {
-        ObjectFactory<User> objectFactory =(ObjectFactory<User>)  beanFactory.getBean("objectFactory");
-        User user = objectFactory.getObject();
-        System.out.println("延迟查找：" + user);
+        ObjectFactory<?> objectFactory = (ObjectFactory<?>) beanFactory.getBean("objectFactory");
+        if (objectFactory.getObject() instanceof User) {
+            User user = (User) objectFactory.getObject();
+            System.out.println("延迟查找：" + user);
+        }
     }
 
     private static void lookupInRealTime(BeanFactory beanFactory) {

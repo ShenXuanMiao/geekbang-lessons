@@ -40,13 +40,13 @@ public class AnnotationApplicationContextAsIoCContainerDemo {
     /**
      * 通过 Java 注解的方式，定义了一个 Bean
      */
-    @Bean
-    public User user() {
-        User user = new User();
-        user.setId(1L);
-        user.setName("小马哥");
-        return user;
-    }
+//    @Bean
+//    public User user() {
+//        User user = new User();
+//        user.setId(1L);
+//        user.setName("小马哥");
+//        return user;
+//    }
 
     private static void lookupCollectionByType(BeanFactory beanFactory) {
         if (beanFactory instanceof ListableBeanFactory) {

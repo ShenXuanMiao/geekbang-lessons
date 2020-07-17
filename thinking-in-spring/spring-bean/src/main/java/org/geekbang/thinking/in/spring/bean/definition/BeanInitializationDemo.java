@@ -35,9 +35,9 @@ public class BeanInitializationDemo {
         System.out.println("Spring 应用上下文已关闭...");
     }
 
-    @Bean(initMethod = "initUserFactory", destroyMethod = "doDestroy")
-    @Lazy(value = false)
-    public UserFactory userFactory() {
-        return new DefaultUserFactory();
-    }
+//    @Bean(initMethod = "initUserFactory", destroyMethod = "doDestroy")
+//    @Lazy(value = false)
+//    public UserFactory userFactory() {
+//        return new DefaultUserFactory();
+//    }
 }

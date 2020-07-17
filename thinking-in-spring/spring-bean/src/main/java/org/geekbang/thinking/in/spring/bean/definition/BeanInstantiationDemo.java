@@ -23,7 +23,6 @@ public class BeanInstantiationDemo {
         System.out.println(user);
         System.out.println(userByInstanceMethod);
         System.out.println(userByFactoryBean);
-
         System.out.println(user == userByInstanceMethod);
         System.out.println(user == userByFactoryBean);
 

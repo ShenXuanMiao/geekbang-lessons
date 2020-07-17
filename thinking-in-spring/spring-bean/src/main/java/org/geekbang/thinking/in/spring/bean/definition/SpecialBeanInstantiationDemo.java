@@ -28,9 +28,10 @@ public class SpecialBeanInstantiationDemo {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:/META-INF/special-bean-instantiation-context.xml");
         // 通过 ApplicationContext 获取 AutowireCapableBeanFactory
         AutowireCapableBeanFactory beanFactory = applicationContext.getAutowireCapableBeanFactory();
-
-        ServiceLoader<UserFactory> serviceLoader = beanFactory.getBean("userFactoryServiceLoader", ServiceLoader.class);
-
+        /*这里老师原本的代码是ServiceLoader<UserFactory> serviceLoader 而不是ServiceLoader<?> serviceLoader,
+        但我觉得原来的代码 并不规范，所以在这里以及displayServiceLoader()中进行了修改，添加了类型判断
+         */
+        ServiceLoader<?> serviceLoader = beanFactory.getBean("userFactoryServiceLoader", ServiceLoader.class);
         displayServiceLoader(serviceLoader);
 
 //        demoServiceLoader();
@@ -46,11 +47,13 @@ public class SpecialBeanInstantiationDemo {
         displayServiceLoader(serviceLoader);
     }
 
-    private static void displayServiceLoader(ServiceLoader<UserFactory> serviceLoader) {
-        Iterator<UserFactory> iterator = serviceLoader.iterator();
+    private static void displayServiceLoader(ServiceLoader<?> serviceLoader) {
+        Iterator<?> iterator = serviceLoader.iterator();
         while (iterator.hasNext()) {
-            UserFactory userFactory = iterator.next();
-            System.out.println(userFactory.createUser());
+            if (iterator.next() instanceof UserFactory){
+                UserFactory userFactory = (UserFactory) iterator.next();
+                System.out.println(userFactory.createUser());
+            }
         }
     }
 }
