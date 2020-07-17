@@ -33,6 +33,7 @@ public class DependencyLookupDemo {
 //        lookupInLazy(beanFactory);
     }
 
+
     private static void lookupByAnnotationType(BeanFactory beanFactory) {
         if (beanFactory instanceof ListableBeanFactory) {
             ListableBeanFactory listableBeanFactory = (ListableBeanFactory) beanFactory;
@@ -65,4 +66,5 @@ public class DependencyLookupDemo {
         User user = (User) beanFactory.getBean("user");
         System.out.println("实时查找：" + user);
     }
+
 }

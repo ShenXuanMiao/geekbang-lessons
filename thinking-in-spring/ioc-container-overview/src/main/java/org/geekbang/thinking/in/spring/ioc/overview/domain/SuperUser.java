@@ -24,8 +24,8 @@ public class SuperUser extends User {
 
     @Override
     public String toString() {
-        return "SuperUser{" +
+        return "子类SuperUser{" +
                 "address='" + address + '\'' +
-                "} " + super.toString();
+                "} " ;
     }
 }

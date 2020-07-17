@@ -138,7 +138,7 @@ public class User implements BeanNameAware {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "父类User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", city=" + city +
