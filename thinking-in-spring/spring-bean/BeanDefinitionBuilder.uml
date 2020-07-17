@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.springframework.beans.factory.support.BeanDefinitionBuilder</OriginalElement>
+  <nodes>
+    <node x="706.0" y="152.0">org.springframework.beans.factory.support.RootBeanDefinition</node>
+    <node x="702.3333333333333" y="304.0">org.springframework.beans.factory.support.BeanDefinitionBuilder</node>
+    <node x="30.0" y="152.0">org.springframework.beans.factory.support.ChildBeanDefinition</node>
+    <node x="515.1666666666667" y="0.0">org.springframework.beans.factory.support.AbstractBeanDefinition</node>
+    <node x="356.0" y="152.0">org.springframework.beans.factory.support.GenericBeanDefinition</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.springframework.beans.factory.support.GenericBeanDefinition" target="org.springframework.beans.factory.support.AbstractBeanDefinition">
+      <point x="75.0" y="-31.0" />
+      <point x="581.0" y="132.0" />
+      <point x="671.1666666666667" y="132.0" />
+      <point x="0.0" y="31.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.support.ChildBeanDefinition" target="org.springframework.beans.factory.support.AbstractBeanDefinition">
+      <point x="69.0" y="-31.0" />
+      <point x="237.0" y="112.0" />
+      <point x="601.8333333333333" y="112.0" />
+      <point x="-69.33333333333337" y="31.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.support.RootBeanDefinition" target="org.springframework.beans.factory.support.AbstractBeanDefinition">
+      <point x="-66.0" y="-31.0" />
+      <point x="772.0" y="132.0" />
+      <point x="705.8333333333333" y="132.0" />
+      <point x="34.66666666666663" y="31.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.6817724068479355" x="516.5" y="183.0" />
+  <SelectedNodes>
+    <node>org.springframework.beans.factory.support.BeanDefinitionBuilder</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
